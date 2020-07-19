@@ -38,7 +38,7 @@
             if (e.MessageType != MediaLogMessageType.Warning && e.MessageType != MediaLogMessageType.Error)
                 return;
 
-            if (string.IsNullOrWhiteSpace(e.Message) == false && e.Message.ContainsOrdinal("Using non-standard frame rate"))
+            if (string.IsNullOrWhiteSpace(e.Message) == false && e.Message.ContainsOrdinal("Standart olmayan kare hızını kullanma"))
                 return;
 
             Debug.WriteLine(e);
@@ -53,8 +53,8 @@
         {
             MessageBox.Show(
                 Application.Current.MainWindow,
-                $"Media Failed: {e.ErrorException.GetType()}\r\n{e.ErrorException.Message}",
-                $"{nameof(MediaElement)} Error",
+                $"Medya Başarısız: {e.ErrorException.GetType()}\r\n{e.ErrorException.Message}",
+                $"{nameof(MediaElement)} Hata",
                 MessageBoxButton.OK,
                 MessageBoxImage.Error,
                 MessageBoxResult.OK);
@@ -71,7 +71,7 @@
         /// <param name="e">The <see cref="MediaInitializingEventArgs"/> instance containing the event data.</param>
         private void OnMediaInitializing(object sender, MediaInitializingEventArgs e)
         {
-            ViewModel.NotificationMessage = "Media is opening . . .";
+            ViewModel.NotificationMessage = "Medya açılıyor . . .";
 
             // An example of injecting input options for http/https streams
             // A simple website to get live stream examples: https://pwn.sh/tools/getstream.html
@@ -227,7 +227,7 @@
                     catch (Exception ex)
                     {
                         // Log the exception, and ignore it. Continue execution.
-                        Debug.WriteLine($"Error loading seek index data. {ex.Message}");
+                        Debug.WriteLine($"Arama dizini verileri yüklenirken hata oluştu. {ex.Message}");
                     }
                 }
 
@@ -308,7 +308,7 @@
             // Set a start position (see issue #66 or issue #277)
             // Media.Position = TimeSpan.FromSeconds(5);
             // await Media.Seek(TimeSpan.FromSeconds(5));
-            ViewModel.NotificationMessage = "Media opened and ready.";
+            ViewModel.NotificationMessage = "Medya açıldı ve hazır.";
         }
 
         /// <summary>
@@ -326,7 +326,7 @@
             }
 
             ViewModel.CurrentMediaOptions = null;
-            ViewModel.NotificationMessage = "Media closed.";
+            ViewModel.NotificationMessage = "Medya kapatıldı.";
         }
 
         /// <summary>
@@ -336,7 +336,7 @@
         /// <param name="e">The <see cref="MediaOpeningEventArgs"/> instance containing the event data.</param>
         private void OnMediaChanging(object sender, MediaOpeningEventArgs e)
         {
-            ViewModel.NotificationMessage = "Media is updating . . .";
+            ViewModel.NotificationMessage = "Medya güncelleniyor . . .";
 
             var availableStreams = e.Info.Streams
                 .Where(s => s.Value.CodecType == (AVMediaType)StreamCycleMediaType)
@@ -401,7 +401,7 @@
         /// <param name="e">The <see cref="MediaOpenedEventArgs"/> instance containing the event data.</param>
         private void OnMediaChanged(object sender, MediaOpenedEventArgs e)
         {
-            ViewModel.NotificationMessage = "Media updated.";
+            ViewModel.NotificationMessage = "Medya güncellendi.";
         }
 
         /// <summary>
@@ -412,7 +412,7 @@
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private async void OnAudioDeviceStopped(object sender, EventArgs e)
         {
-            ViewModel.NotificationMessage = "Audio device stopped.";
+            ViewModel.NotificationMessage = "Ses cihazı durdu.";
             if (sender is MediaElement media)
                 await media.ChangeMedia();
         }

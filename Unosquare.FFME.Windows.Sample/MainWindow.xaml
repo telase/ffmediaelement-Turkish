@@ -24,9 +24,13 @@
         <TaskbarItemInfo ProgressValue="{Binding PlaybackProgress}" ProgressState="{Binding PlaybackProgressState}" />
     </Window.TaskbarItemInfo>
     <Grid Name="Player">
-        <ffme:MediaElement Name="Media" Background="Black" LoadedBehavior="Play" IsDesignPreviewEnabled="True" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="1111*"/>
+        </Grid.ColumnDefinitions>
+        <ffme:MediaElement Name="Media" Background="Black" LoadedBehavior="Play" IsDesignPreviewEnabled="True" Grid.ColumnSpan="2" />
 
-        <DockPanel x:Name="LayoutPanel" LastChildFill="False">
+        <DockPanel x:Name="LayoutPanel" LastChildFill="False" Grid.ColumnSpan="2">
 
             <controls:ControllerPanelControl
                 x:Name="ControllerPanel"

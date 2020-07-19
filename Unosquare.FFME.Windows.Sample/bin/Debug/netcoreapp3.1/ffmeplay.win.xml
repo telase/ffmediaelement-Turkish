@@ -1,0 +1,1207 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ffmeplay.win</name>
+    </assembly>
+    <members>
+        <member name="T:Unosquare.FFME.Windows.Sample.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.App" /> class.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.App.ViewModel">
+            <summary>
+            Provides access to the root-level, application-wide VM.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.App.IsInDesignMode">
+            <summary>
+            Determines if the Application is in design mode.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.App.GetCaptureFilePath(System.String,System.String)">
+            <summary>
+            Gets a full file path for a screen capture or stream recording.
+            </summary>
+            <param name="mediaPrefix">The media prefix. Use Screenshot or Capture for example.</param>
+            <param name="extension">The file extension without a dot.</param>
+            <returns>A full file path where the media file will be written to.</returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.App.OnStartup(System.Windows.StartupEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.AppCommands">
+            <summary>
+            Represents the Application-Wide Commands.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.AppCommands.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.AppCommands"/> class.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.AppCommands.OpenCommand">
+            <summary>
+            Gets the open command.
+            </summary>
+            <value>
+            The open command.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.AppCommands.CloseCommand">
+            <summary>
+            Gets the close command.
+            </summary>
+            <value>
+            The close command.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.AppCommands.PauseCommand">
+            <summary>
+            Gets the pause command.
+            </summary>
+            <value>
+            The pause command.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.AppCommands.PlayCommand">
+            <summary>
+            Gets the play command.
+            </summary>
+            <value>
+            The play command.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.AppCommands.StopCommand">
+            <summary>
+            Gets the stop command.
+            </summary>
+            <value>
+            The stop command.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.AppCommands.ToggleFullscreenCommand">
+            <summary>
+            Gets the toggle fullscreen command.
+            </summary>
+            <value>
+            The toggle fullscreen command.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.AppCommands.RemovePlaylistItemCommand">
+            <summary>
+            Gets the remove playlist item command.
+            </summary>
+            <value>
+            The remove playlist item command.
+            </value>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Controls.ControllerPanelControl">
+            <summary>
+            Interaction logic for ControllerPanelControl.xaml.
+            </summary>
+            <summary>
+            ControllerPanelControl
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Controls.ControllerPanelControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.Controls.ControllerPanelControl"/> class.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Controls.ControllerPanelControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Controls.PlaylistPanelControl">
+            <summary>
+            Interaction logic for PlaylistPanelControl.xaml.
+            </summary>
+            <summary>
+            PlaylistPanelControl
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Controls.PlaylistPanelControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.Controls.PlaylistPanelControl"/> class.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Controls.PlaylistPanelControl.ViewModel">
+            <summary>
+            A proxy, strongly-typed property to the underlying DataContext.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Controls.PlaylistPanelControl.FocusSearchBox">
+            <summary>
+            Focuses the search box.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Controls.PlaylistPanelControl.FocusFileBox">
+            <summary>
+            Focuses the file box.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Controls.PlaylistPanelControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Controls.PropertiesPanelControl">
+            <summary>
+            Interaction logic for MediaPropertyPanelControl.xaml.
+            </summary>
+            <summary>
+            PropertiesPanelControl
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Controls.PropertiesPanelControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.Controls.PropertiesPanelControl"/> class.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Controls.PropertiesPanelControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntry">
+            <summary>
+            A custom playlist entry with notification properties backed by Attributes.
+            </summary>
+            <seealso cref="T:Unosquare.FFME.Playlists.PlaylistEntry" />
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntry.Thumbnail">
+            <summary>
+            Gets or sets the thumbnail.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntry.Format">
+            <summary>
+            Gets or sets the format.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntry.LastOpenedUtc">
+            <summary>
+            Gets or sets the last opened UTC.
+            </summary>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntryCollection">
+            <summary>
+            A class exposing usage of custom play lists.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntryCollection.#ctor(Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntryCollection" /> class.
+            </summary>
+            <param name="viewModel">The view model.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntryCollection.FindEntryByMediaSource(System.Uri)">
+            <summary>
+            Finds an entry based on the media url.
+            </summary>
+            <param name="mediaSource">The media URL.</param>
+            <returns>The playlist entry or null if not found.</returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntryCollection.AddOrUpdateEntry(System.Uri,Unosquare.FFME.Common.MediaInfo)">
+            <summary>
+            Adds or updates an entry.
+            </summary>
+            <param name="mediaSource">The current media source URI.</param>
+            <param name="info">The media information.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntryCollection.AddOrUpdateEntryThumbnail(System.Uri,Unosquare.FFME.Common.BitmapDataBuffer)">
+            <summary>
+            Sets the entry thumbnail.
+            Deletes the prior thumbnail file is found or previously set.
+            </summary>
+            <param name="mediaSource">The media info.</param>
+            <param name="bitmap">The bitmap.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntryCollection.RemoveEntryByMediaSource(System.Uri)">
+            <summary>
+            Removes the entry.
+            </summary>
+            <param name="mediaSource">The media source.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntryCollection.LoadEntries">
+            <summary>
+            Loads the Playlist from the default location.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.CustomPlaylistEntryCollection.SaveEntries">
+            <summary>
+            Saves the playlist to the default location.
+            </summary>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.DeferredAction">
+            <summary>
+            Represents a timer which performs an action on the UI thread when time elapses.  Rescheduling is supported.
+            Original code from here: https://www.codeproject.com/Articles/32426/Deferring-ListCollectionView-filter-updates-for-a address.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DeferredAction.#ctor(System.Action{Unosquare.FFME.Windows.Sample.Foundation.DeferredAction})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.Foundation.DeferredAction"/> class.
+            </summary>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DeferredAction.Create(System.Action{Unosquare.FFME.Windows.Sample.Foundation.DeferredAction})">
+            <summary>
+            Creates a new DeferredAction.
+            </summary>
+            <param name="action">
+            The action that will be deferred.  It is not performed until after <see cref="M:Unosquare.FFME.Windows.Sample.Foundation.DeferredAction.Defer(System.TimeSpan)"/> is called.
+            </param>
+            <returns>The Deferred Action.</returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DeferredAction.Defer(System.TimeSpan)">
+            <summary>
+            Defers performing the action until after time elapses.  Repeated calls will reschedule the action
+            if it has not already been performed.
+            </summary>
+            <param name="delay">
+            The amount of time to wait before performing the action.
+            </param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DeferredAction.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand">
+            <summary>
+            Serves as a UI, XAML-bindable command defined using delegates.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand.#ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand"/> class.
+            </summary>
+            <param name="execute">The execute callback.</param>
+            <param name="canExecute">The can execute checker callback.</param>
+            <exception cref="T:System.ArgumentNullException">execute.</exception>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand.#ctor(System.Action{System.Object})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand"/> class.
+            </summary>
+            <param name="execute">The execute callback.</param>
+            <exception cref="T:System.ArgumentNullException">execute.</exception>
+        </member>
+        <member name="E:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand.CanExecuteChanged">
+            <inheritdoc />
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand.IsExecuting">
+            <summary>
+            Determines if the command is currently executing.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+            <returns>
+            true if this command can be executed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand.CanExecute">
+            <summary>
+            Determines whether this instance can execute.
+            </summary>
+            <returns>
+              <c>true</c> if this instance can execute; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand.Execute(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand.Execute">
+            <summary>
+            Executes the command but does not wait for it to complete.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand.ExecuteAsync(System.Object)">
+            <summary>
+            Executes the command. This call can be awaited.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+            <returns>The awaitable task.</returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.DelegateCommand.ExecuteAsync">
+            <summary>
+            Executes the command. This call can be awaited.
+            </summary>
+            <returns>The awaitable task.</returns>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream">
+            <inheritdoc />
+            <summary>
+            Provides an example of a very simple custom input stream.
+            </summary>
+            <seealso cref="T:Unosquare.FFME.Common.IMediaInputStream" />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream"/> class.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream.Scheme">
+            <summary>
+            The custom file scheme (URL prefix) including the :// sequence.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream.StreamUri">
+            <inheritdoc />
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream.CanSeek">
+            <inheritdoc />
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream.ReadBufferLength">
+            <inheritdoc />
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream.OnInitializing">
+            <inheritdoc />
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream.OnInitialized">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream.Read(System.Void*,System.Byte*,System.Int32)">
+            <summary>
+            Reads from the underlying stream and writes up to <paramref name="targetBufferLength" /> bytes
+            to the <paramref name="targetBuffer" />. Returns the number of bytes that were written.
+            </summary>
+            <param name="opaque">The opaque.</param>
+            <param name="targetBuffer">The target buffer.</param>
+            <param name="targetBufferLength">Length of the target buffer.</param>
+            <returns>
+            The number of bytes that have been read.
+            </returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.FileInputStream.Seek(System.Void*,System.Int64,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.ReactiveExtensions">
+            <summary>
+            A very simple set of extensions to more easily handle UI state changes based on
+            notification properties. The main idea is to bind to the PropertyChanged event
+            for a publisher only one and add a set of callbacks with matching property names
+            when the publisher raises the event.
+            </summary>
+        </member>
+        <member name="F:Unosquare.FFME.Windows.Sample.Foundation.ReactiveExtensions.Subscriptions">
+            <summary>
+            Contains a list of subscriptions Subscriptions[Publisher][PropertyName].List of subscriber-action pairs.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.ReactiveExtensions.WhenChanged(System.ComponentModel.INotifyPropertyChanged,System.Action,System.String[])">
+            <summary>
+            Specifies a callback when properties change.
+            </summary>
+            <param name="publisher">The publisher.</param>
+            <param name="callback">The callback.</param>
+            <param name="propertyNames">The property names.</param>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.ThumbnailGenerator">
+            <summary>
+            A class for creating, saving, and loading thumbnails.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.ThumbnailGenerator.SnapThumbnail(System.Drawing.Image,System.String)">
+            <summary>
+            Snaps the thumbnail.
+            </summary>
+            <param name="sourceImage">The source image.</param>
+            <param name="targetPath">The target path.</param>
+            <returns>The file name guid.</returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.ThumbnailGenerator.GetThumbnail(System.String,System.String)">
+            <summary>
+            Gets the thumbnail.
+            </summary>
+            <param name="targetPath">The target path.</param>
+            <param name="thumbnailFilename">The thumbnail filename.</param>
+            <returns>
+            An image Source.
+            </returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.ThumbnailGenerator.CreateThumbnail(System.Drawing.Image,System.Drawing.Color,System.Int32,System.Int32)">
+            <summary>
+            Creates the thumbnail.
+            </summary>
+            <param name="sourceImage">The source image.</param>
+            <param name="background">The background.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <returns>The thumbnail image.</returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.ThumbnailGenerator.SaveThumbnail(System.Drawing.Image,System.String)">
+            <summary>
+            Saves the thumbnail.
+            </summary>
+            <param name="thumbnail">The thumbnail.</param>
+            <param name="baseDirectory">The base directory.</param>
+            <returns>The filename with extension.</returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.ThumbnailGenerator.ComputeProportionalSize(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Computes the size of the proportional.
+            </summary>
+            <param name="maxSize">The maximum size.</param>
+            <param name="currentSize">Size of the current.</param>
+            <returns>A proportional size structure.</returns>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.TransportStreamRecorder">
+            <summary>
+            An recorder that simply copies input packets into an output file.
+            Loosely based on the ideas from
+            https://github.com/FFmpeg/FFmpeg/blob/5252d594a155cdb0a0e2529961b999cda96f0fa5/doc/examples/remuxing.c#L80
+            This example does not cover re-encoding. Only re-muxing packets into a file.
+            For re-encoding you will need to handle the following events and perform encoding on your own
+            <see cref="E:Unosquare.FFME.MediaElement.VideoFrameDecoded"/>
+            <see cref="E:Unosquare.FFME.MediaElement.AudioFrameDecoded"/>
+            <see cref="E:Unosquare.FFME.MediaElement.SubtitleDecoded"/>.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.TransportStreamRecorder.#ctor(System.String,Unosquare.FFME.MediaElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.Foundation.TransportStreamRecorder"/> class.
+            </summary>
+            <param name="outputFilePath">The output file path. The extension will be guessed according to the input.</param>
+            <param name="media">The parent media element.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.TransportStreamRecorder.Close">
+            <summary>
+            Writes the file trailer and releases the output context and file.
+            Make sure you call this method when finishing the capture process.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.TransportStreamRecorder.Release">
+            <summary>
+            Releases unmanaged resources and prevents more packets from being handled.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.TransportStreamRecorder.GuessOutputFilePath(FFmpeg.AutoGen.AVFormatContext*)">
+            <summary>
+            Guesses the file path with an appropriate extension according to the input context.
+            </summary>
+            <param name="inputContext">The input context.</param>
+            <returns>A suitable file path with appropriate file extension.</returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.TransportStreamRecorder.Initialize(FFmpeg.AutoGen.AVFormatContext*)">
+            <summary>
+            Initializes the output context and writes the file header.
+            </summary>
+            <param name="inputContext">The input context.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.TransportStreamRecorder.OnMediaPacketRead(System.Object,Unosquare.FFME.Common.PacketReadEventArgs)">
+            <summary>
+            Handles the Media.PacketRead event writing the packet to the output context.
+            </summary>
+            <param name="sender">the media element that sent this event.</param>
+            <param name="e">The event arguments containing the packet data.</param>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.TimeSpanToSecondsConverter">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.TimeSpanToSecondsConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.TimeSpanToSecondsConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.TimeSpanFormatter">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.TimeSpanFormatter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.TimeSpanFormatter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.ByteFormatter">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.ByteFormatter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.ByteFormatter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.BitFormatter">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.BitFormatter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.BitFormatter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.PercentageFormatter">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.PercentageFormatter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.PercentageFormatter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.PlaylistEntryThumbnailConverter">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.PlaylistEntryThumbnailConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.PlaylistEntryThumbnailConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.PlaylistDurationFormatter">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.PlaylistDurationFormatter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.PlaylistDurationFormatter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.UtcDateToLocalTimeString">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.UtcDateToLocalTimeString.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.UtcDateToLocalTimeString.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.InverseBooleanConverter">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.InverseBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.InverseBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.ClosedCaptionsChannelConverter">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.ClosedCaptionsChannelConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.ClosedCaptionsChannelConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus">
+            <summary>
+            Represents the general state of a Window.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.WindowState">
+            <summary>
+            Gets or sets the state of the window.
+            </summary>
+            <value>
+            The state of the window.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.Top">
+            <summary>
+            Gets or sets the top.
+            </summary>
+            <value>
+            The top.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.Left">
+            <summary>
+            Gets or sets the left.
+            </summary>
+            <value>
+            The left.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.WindowStyle">
+            <summary>
+            Gets or sets the window style.
+            </summary>
+            <value>
+            The window style.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.Topmost">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus"/> is topmost.
+            </summary>
+            <value>
+              <c>true</c> if topmost; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.ResizeMode">
+            <summary>
+            Gets or sets the resize mode.
+            </summary>
+            <value>
+            The resize mode.
+            </value>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.DisableDisplayTimeout">
+            <summary>
+            Disables the display timeout.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.EnableDisplayTimeout">
+            <summary>
+            Allows the display timeout.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.Capture(System.Windows.Window)">
+            <summary>
+            Captures the specified window state.
+            </summary>
+            <param name="w">The w.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.Apply(System.Windows.Window)">
+            <summary>
+            Applies the specified window state.
+            </summary>
+            <param name="w">The w.</param>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.Foundation.WindowStatus.NativeMethods">
+            <summary>
+            Provides access to disable or enable screen timeout. Original idea taken from:
+            http://www.blackwasp.co.uk/DisableScreensaver.aspx address.
+            </summary>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaMessageLogged(System.Object,Unosquare.FFME.Common.MediaLogMessageEventArgs)">
+            <summary>
+            Handles the MessageLogged event of the Media control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.MediaLogMessageEventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaFFmpegMessageLogged(System.Object,Unosquare.FFME.Common.MediaLogMessageEventArgs)">
+            <summary>
+            Handles the FFmpegMessageLogged event of the MediaElement control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.MediaLogMessageEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaFailed(System.Object,Unosquare.FFME.Common.MediaFailedEventArgs)">
+            <summary>
+            Handles the MediaFailed event of the Media control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.MediaFailedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaInitializing(System.Object,Unosquare.FFME.Common.MediaInitializingEventArgs)">
+            <summary>
+            Handles the MediaInitializing event of the Media control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.MediaInitializingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaOpening(System.Object,Unosquare.FFME.Common.MediaOpeningEventArgs)">
+            <summary>
+            Handles the MediaOpening event of the Media control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.MediaOpeningEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaOpened(System.Object,Unosquare.FFME.Common.MediaOpenedEventArgs)">
+            <summary>
+            Handles the MediaOpened event of the Media control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaReady(System.Object,System.EventArgs)">
+            <summary>
+            Handles the MediaReady event of the Media control.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaClosed(System.Object,System.EventArgs)">
+            <summary>
+            Handles the MediaClosed event of the Media control.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaChanging(System.Object,Unosquare.FFME.Common.MediaOpeningEventArgs)">
+            <summary>
+            Handles the MediaChanging event of the MediaControl.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.MediaOpeningEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaChanged(System.Object,Unosquare.FFME.Common.MediaOpenedEventArgs)">
+            <summary>
+            Handles the media changed event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.MediaOpenedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnAudioDeviceStopped(System.Object,System.EventArgs)">
+            <summary>
+            Called when the current audio device changes.
+            Call <see cref="M:Unosquare.FFME.MediaElement.ChangeMedia"/> so the new default audio device gets selected.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnDataFrameReceived(System.Object,Unosquare.FFME.Common.DataFrameReceivedEventArgs)">
+            <summary>
+            Handles the reception of data frames.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.DataFrameReceivedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaPositionChanged(System.Object,Unosquare.FFME.Common.PositionChangedEventArgs)">
+            <summary>
+            Handles the PositionChanged event of the Media control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.PositionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaStateChanged(System.Object,Unosquare.FFME.Common.MediaStateChangedEventArgs)">
+            <summary>
+            Called when media state changes.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.MediaStateChangedEventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.LoadOrCreateVideoSeekIndex(System.String,System.Int32,System.Double)">
+            <summary>
+            Loads or creates a seek index for short media files.
+            </summary>
+            <param name="mediaFilePath">The URL.</param>
+            <param name="streamIndex">The associated stream index.</param>
+            <param name="durationSeconds">The duration in seconds.</param>
+            <returns>
+            The seek index.
+            </returns>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.BindMediaRenderingEvents">
+            <summary>
+            Provides examples for rendering events.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.MainWindow.ViewModel">
+            <summary>
+            A proxy, strongly-typed property to the underlying DataContext.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.MainWindow.IsCaptureInProgress">
+            <summary>
+            A flag indicating whether screenshot capture progress is currently active.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.InitializeMainWindow">
+            <summary>
+            Initializes the main window.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.InitializeMediaEvents">
+            <summary>
+            Initializes the media events.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnWindowLoaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Loaded event of the MainWindow control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnWindowKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Handles the PreviewKeyDown event of the MainWindow control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Input.KeyEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMediaDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Handles the PreviewMouseDoubleClick event of the Media control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.OnMouseWheelChange(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Handles the MouseWheel event of the MainWindow control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Input.MouseWheelEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.ViewModels.AttachedViewModel">
+            <summary>
+            A base class for Root VM-attached view models.
+            </summary>
+            <seealso cref="T:Unosquare.FFME.Common.ViewModelBase" />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.AttachedViewModel.#ctor(Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.ViewModels.AttachedViewModel"/> class.
+            </summary>
+            <param name="root">The root.</param>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.AttachedViewModel.Root">
+            <summary>
+            Gets the root VM this object belongs to.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.AttachedViewModel.OnApplicationLoaded">
+            <summary>
+            Called by the root ViewModel when the application is loaded and fully available.
+            </summary>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel">
+            <summary>
+            Represents a VM for the Controller Control.
+            </summary>
+            <seealso cref="T:Unosquare.FFME.Windows.Sample.ViewModels.AttachedViewModel" />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.#ctor(Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel"/> class.
+            </summary>
+            <param name="root">The root.</param>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.VideoContrast">
+            <summary>
+            Gets or sets the video contrast.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.VideoBrightness">
+            <summary>
+            Gets or sets the video brightness.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.VideoSaturation">
+            <summary>
+            Gets or sets the video saturation.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.IsMediaOpenVisibility">
+            <summary>
+            Gets or sets the is media open visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.IsAudioControlEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is audio control enabled.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.ClosedCaptionsVisibility">
+            <summary>
+            Gets or sets the CC channel button control visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.IsSpeedRatioEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is speed ratio enabled.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.AudioControlVisibility">
+            <summary>
+            Gets or sets the audio control visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.IsLoopingMediaEnabled">
+            <summary>
+            Gets or sets a value indicating whether media should start playing from the start when it reaches the end.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.PauseButtonVisibility">
+            <summary>
+            Gets or sets the pause button visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.PlayButtonVisibility">
+            <summary>
+            Gets or sets the play button visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.StopButtonVisibility">
+            <summary>
+            Gets or sets the stop button visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.CloseButtonVisibility">
+            <summary>
+            Gets or sets the close button visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.OpenButtonVisibility">
+            <summary>
+            Gets or sets the open button visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.SeekBarVisibility">
+            <summary>
+            Gets or sets the seek bar visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.BufferingProgressVisibility">
+            <summary>
+            Gets or sets the buffering progress visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.DownloadProgressVisibility">
+            <summary>
+            Gets or sets the download progress visibility.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.MediaElementZoom">
+            <summary>
+            Gets or sets the media element zoom.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.ControllerViewModel.OnApplicationLoaded">
+            <inheritdoc />
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel">
+            <summary>
+            Represents the Playlist.
+            </summary>
+            <seealso cref="T:Unosquare.FFME.Windows.Sample.ViewModels.AttachedViewModel" />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.#ctor(Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel"/> class.
+            </summary>
+            <param name="root">The root.</param>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.Entries">
+            <summary>
+            Gets the custom playlist. Do not use for data-binding.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.EntriesView">
+            <summary>
+            Gets the custom playlist entries as a view that can be used in data binding scenarios.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.ThumbsDirectory">
+            <summary>
+            Gets the full path where thumbnails are stored.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.IndexDirectory">
+            <summary>
+            Gets the seek index base directory.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.PlaylistFilePath">
+            <summary>
+            Gets the playlist file path.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.PlaylistSearchString">
+            <summary>
+            Gets or sets the playlist search string.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.IsPlaylistEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is playlist enabled.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.IsInOpenMode">
+            <summary>
+            Gets or sets a value indicating whether this instance is in open mode.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.OpenMediaSource">
+            <summary>
+            Gets or sets the open model URL.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.OnApplicationLoaded">
+            <inheritdoc />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.OnMediaOpened(System.Object,System.EventArgs)">
+            <summary>
+            Called when Media is opened.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.PlaylistViewModel.OnRenderingVideo(System.Object,Unosquare.FFME.Common.RenderingVideoEventArgs)">
+            <summary>
+            Handles the RenderingVideo event of the Media control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Unosquare.FFME.Common.RenderingVideoEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel">
+            <summary>
+            Represents the application-wide view model.
+            </summary>
+            <seealso cref="T:Unosquare.FFME.Common.ViewModelBase" />
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.ProductName">
+            <summary>
+            Gets the product name.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.Playlist">
+            <summary>
+            Gets the playlist ViewModel.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.Controller">
+            <summary>
+            Gets the controller.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.AppVersion">
+            <summary>
+            Gets the application version.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.AppDataDirectory">
+            <summary>
+            Gets the application data directory.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.WindowTitle">
+            <summary>
+            Gets the window title.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.NotificationMessage">
+            <summary>
+            Gets or sets the notification message to be displayed.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.PlaybackProgress">
+            <summary>
+            Gets or sets the playback progress.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.PlaybackProgressState">
+            <summary>
+            Gets or sets the state of the playback progress.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.IsPlaylistPanelOpen">
+            <summary>
+            Gets or sets a value indicating whether this instance is playlist panel open.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.IsPropertiesPanelOpen">
+            <summary>
+            Gets or sets a value indicating whether this instance is properties panel open.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.IsApplicationLoaded">
+            <summary>
+            Gets or sets a value indicating whether this instance is application loaded.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.Commands">
+            <summary>
+            Provides access to application-wide commands.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.MediaElement">
+            <summary>
+            Gets the media element hosted by the main window.
+            </summary>
+        </member>
+        <member name="P:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.CurrentMediaOptions">
+            <summary>
+            Provides access to the current media options.
+            This is an unsupported usage of media options.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.OnApplicationLoaded">
+            <summary>
+            Called when application has finished loading.
+            </summary>
+        </member>
+        <member name="M:Unosquare.FFME.Windows.Sample.ViewModels.RootViewModel.UpdateWindowTitle">
+            <summary>
+            Updates the window title according to the current state.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

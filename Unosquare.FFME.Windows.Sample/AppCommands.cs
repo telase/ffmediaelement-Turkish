@@ -61,8 +61,8 @@
                 {
                     MessageBox.Show(
                         Application.Current.MainWindow,
-                        $"Media Failed: {ex.GetType()}\r\n{ex.Message}",
-                        $"{nameof(MediaElement)} Error",
+                        $"Medya Başarısız: {ex.GetType()}\r\n{ex.Message}",
+                        $"{nameof(MediaElement)} Hata",
                         MessageBoxButton.OK,
                         MessageBoxImage.Error,
                         MessageBoxResult.OK);

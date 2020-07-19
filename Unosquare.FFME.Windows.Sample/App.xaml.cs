@@ -20,9 +20,8 @@
         public App()
         {
             // Change the default location of the ffmpeg binaries (same directory as application)
-            // You can get the 32-bit binaries here: https://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-4.2.1-win32-shared.zip
-            // You can get the 64-bit binaries here: https://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-4.2.1-win64-shared.zip
-            Library.FFmpegDirectory = @"c:\ffmpeg" + (Environment.Is64BitProcess ? @"\x64" : string.Empty);
+            // You can get the 64-bit binaries here: https://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-latest-win64-shared.zip
+            Library.FFmpegDirectory = @"C:\Program Files\FFMPEG" + (Environment.Is64BitProcess ? @"\x64" : string.Empty);
 
             // You can pick which FFmpeg binaries are loaded. See issue #28
             // For more specific control (issue #414) you can set Library.FFmpegLoadModeFlags to:
@@ -59,8 +58,8 @@
             var date = DateTime.UtcNow;
             var dateString = $"{date.Year:0000}-{date.Month:00}-{date.Day:00} {date.Hour:00}-{date.Minute:00}-{date.Second:00}.{date.Millisecond:000}";
             var targetFolder = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory),
-                "ffmeplay");
+                Environment.GetFolderPath(Environment.SpecialFolder.MyVideos),
+                "FFmpeg Player");
 
             if (Directory.Exists(targetFolder) == false)
                 Directory.CreateDirectory(targetFolder);
@@ -98,12 +97,12 @@
                         await dispatcher.BeginInvoke(new Action(() =>
                         {
                             MessageBox.Show(MainWindow,
-                                $"Unable to Load FFmpeg Libraries from path:\r\n    {Library.FFmpegDirectory}" +
-                                $"\r\nMake sure the above folder contains FFmpeg shared binaries (dll files) for the " +
-                                $"applicantion's architecture ({(Environment.Is64BitProcess ? "64-bit" : "32-bit")})" +
-                                $"\r\nTIP: You can download builds from https://ffmpeg.zeranoe.com/builds/" +
-                                $"\r\n{ex.GetType().Name}: {ex.Message}\r\n\r\nApplication will exit.",
-                                "FFmpeg Error",
+                                $"FFmpeg Kitaplıkları yüklenemiyor:\r\n    {Library.FFmpegDirectory}" +
+                                $"\r\nYukarıdaki klasörün, FFmpeg dll dosyaları dosyalarını içerdiğinden emin olun. " +
+                                $"uygulama mimarisi ({(Environment.Is64BitProcess ? "64-bit" : "32-bit")})" +
+                                $"\r\nİPUCU: FFmpeg dll dosyaları şuradan indirebilirsiniz: https://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-latest-win64-shared.zip" +
+                                $"\r\n{ex.GetType().Name}: {ex.Message}\r\n\r\nUygulamadan çıkılacak.",
+                                "FFmpeg Hata!!",
                                 MessageBoxButton.OK,
                                 MessageBoxImage.Error);
 

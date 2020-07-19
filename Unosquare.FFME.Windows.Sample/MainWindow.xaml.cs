@@ -296,7 +296,7 @@
             }
 
             // Play
-            if (TogglePlayPauseKeys.Contains(e.Key) && Media.IsPlaying == false)
+            if (TogglePlayPauseKeys.Contains(e.Key) && Media.IsPlaying == true)
             {
                 await App.ViewModel.Commands.PlayCommand.ExecuteAsync();
                 return;
@@ -320,7 +320,7 @@
             if (e.Key == Key.Add || e.Key == Key.VolumeUp)
             {
                 Media.Volume += Media.Volume >= 1 ? 0 : 0.05;
-                ViewModel.NotificationMessage = $"Volume: {Media.Volume:p0}";
+                ViewModel.NotificationMessage = $"Ses: {Media.Volume:p0}";
                 return;
             }
 
@@ -328,7 +328,7 @@
             if (e.Key == Key.Subtract || e.Key == Key.VolumeDown)
             {
                 Media.Volume -= Media.Volume <= 0 ? 0 : 0.05;
-                ViewModel.NotificationMessage = $"Volume: {Media.Volume:p0}";
+                ViewModel.NotificationMessage = $"Ses: {Media.Volume:p0}";
                 return;
             }
 
@@ -336,7 +336,7 @@
             if (e.Key == Key.M || e.Key == Key.VolumeMute)
             {
                 Media.IsMuted = !Media.IsMuted;
-                ViewModel.NotificationMessage = Media.IsMuted ? "Muted." : "Unmuted.";
+                ViewModel.NotificationMessage = Media.IsMuted ? "Sessiz." : "Ses Açık.";
                 return;
             }
 
@@ -384,7 +384,7 @@
                 var currentCaptions = (int)Media.ClosedCaptionsChannel;
                 var nextCaptions = currentCaptions >= (int)CaptionsChannel.CC4 ? CaptionsChannel.CCP : (CaptionsChannel)(currentCaptions + 1);
                 Media.ClosedCaptionsChannel = nextCaptions;
-                ViewModel.NotificationMessage = $"Closed-Captions: {nextCaptions}";
+                ViewModel.NotificationMessage = $"Başlıklar: {nextCaptions}";
                 return;
             }
 
@@ -399,46 +399,7 @@
                 ViewModel.Controller.VideoBrightness = 0;
                 ViewModel.Controller.VideoSaturation = 1;
                 ViewModel.Controller.MediaElementZoom = 1.0;
-                ViewModel.NotificationMessage = "Defaults applied.";
-                return;
-            }
-
-            // Contrast Controls
-            if (e.Key == Key.Y)
-            {
-                ViewModel.Controller.VideoContrast += 0.05;
-                return;
-            }
-
-            if (e.Key == Key.H)
-            {
-                ViewModel.Controller.VideoContrast -= 0.05;
-                return;
-            }
-
-            // Brightness Controls
-            if (e.Key == Key.U)
-            {
-                ViewModel.Controller.VideoBrightness += 0.05;
-                return;
-            }
-
-            if (e.Key == Key.J)
-            {
-                ViewModel.Controller.VideoBrightness -= 0.05;
-                return;
-            }
-
-            // Saturation Controls
-            if (e.Key == Key.I)
-            {
-                ViewModel.Controller.VideoSaturation += 0.05;
-                return;
-            }
-
-            if (e.Key == Key.K)
-            {
-                ViewModel.Controller.VideoSaturation -= 0.05;
+                ViewModel.NotificationMessage = "Varsayılanlar uygulandı.";
                 return;
             }
 
@@ -451,17 +412,17 @@
                 if (string.IsNullOrWhiteSpace(mediaOptions.AudioFilter))
                 {
                     mediaOptions.AudioFilter = "aecho=0.8:0.9:1000:0.3";
-                    ViewModel.NotificationMessage = "Applied echo audio filter.";
+                    ViewModel.NotificationMessage = "Uygulamalı yankı ses filtresi.";
                 }
                 else if (mediaOptions.AudioFilter == "aecho=0.8:0.9:1000:0.3")
                 {
-                    mediaOptions.AudioFilter = "chorus=0.5:0.9:50|60|40:0.4|0.32|0.3:0.25|0.4|0.3:2|2.3|1.3";
-                    ViewModel.NotificationMessage = "Applied chorus audio filter.";
+                    mediaOptions.AudioFilter = "koro=0.5:0.9:50|60|40:0.4|0.32|0.3:0.25|0.4|0.3:2|2.3|1.3";
+                    ViewModel.NotificationMessage = "Uygulamalı koro ses filtresi.";
                 }
                 else
                 {
                     mediaOptions.AudioFilter = string.Empty;
-                    ViewModel.NotificationMessage = "Cleared audio filter.";
+                    ViewModel.NotificationMessage = "Temizlenmiş ses filtresi.";
                 }
 
                 return;
@@ -489,8 +450,8 @@
                         var bmp = Media.CaptureBitmapAsync().GetAwaiter().GetResult();
 
                         // prevent firther processing if we did not get a bitmap.
-                        bmp?.Save(App.GetCaptureFilePath("Screenshot", "png"), ImageFormat.Png);
-                        ViewModel.NotificationMessage = "Captured screenshot.";
+                        bmp?.Save(App.GetCaptureFilePath("Ekran görüntüsü", "png"), ImageFormat.Png);
+                        ViewModel.NotificationMessage = "Ekran görüntüsü alındı .";
                     }
                     catch (Exception ex)
                     {
@@ -498,8 +459,8 @@
                         {
                             MessageBox.Show(
                                 this,
-                                $"Capturing Video Frame Failed: {ex.GetType()}\r\n{ex.Message}",
-                                $"{nameof(MediaElement)} Error",
+                                $"Video Çerçevesini Yakalama Başarısız: {ex.GetType()}\r\n{ex.Message}",
+                                $"{nameof(MediaElement)} Hata",
                                 MessageBoxButton.OK,
                                 MessageBoxImage.Error,
                                 MessageBoxResult.OK);
@@ -522,13 +483,13 @@
                 {
                     if (StreamRecorder == null && Media.IsOpen)
                     {
-                        StreamRecorder = new TransportStreamRecorder(App.GetCaptureFilePath("Capture", "ts"), Media);
-                        ViewModel.NotificationMessage = "Stream recording initiated.";
+                        StreamRecorder = new TransportStreamRecorder(App.GetCaptureFilePath("Yakalama", "ts"), Media);
+                        ViewModel.NotificationMessage = "Akış kaydı başlatıldı.";
                     }
                     else
                     {
                         if (StreamRecorder != null)
-                            ViewModel.NotificationMessage = "Stream recording completed.";
+                            ViewModel.NotificationMessage = "Akış kaydı tamamlandı.";
 
                         StreamRecorder?.Close();
                         StreamRecorder = null;

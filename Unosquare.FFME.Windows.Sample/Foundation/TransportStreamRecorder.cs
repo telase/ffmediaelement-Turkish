@@ -104,7 +104,7 @@
                 result = ffmpeg.avformat_alloc_output_context2(&outputContext, null, null, outputFilePath);
 
                 if (result < 0)
-                    throw new InvalidOperationException("Unable to allocate output context");
+                    throw new InvalidOperationException("Çıktı içeriği ulaşılamıyor");
 
                 OutputContext = outputContext;
                 StreamMappings.Clear();
@@ -117,13 +117,13 @@
                     if (stream == null)
                     {
                         result = -ffmpeg.ENOMEM;
-                        throw new InvalidOperationException($"Unable to create output stream for stream index {streamIndex}");
+                        throw new InvalidOperationException($"Akış dizini için çıktı akışı oluşturulamıyor {streamIndex}");
                     }
 
                     result = ffmpeg.avcodec_parameters_copy(stream->codecpar, codecParams);
 
                     if (result < 0)
-                        throw new InvalidOperationException($"Unable to copy codec parameters to stream index {streamIndex}");
+                        throw new InvalidOperationException($"Codec parametreleri akış dizinine kopyalanamıyor {streamIndex}");
 
                     stream->codecpar->codec_tag = 0;
                     StreamMappings[streamIndex] = stream->index;
@@ -131,17 +131,17 @@
 
                 result = ffmpeg.avio_open(&outputContext->pb, outputFilePath, ffmpeg.AVIO_FLAG_WRITE);
                 if (result < 0)
-                    throw new InvalidOperationException($"Could not open output file '{outputFilePath}'");
+                    throw new InvalidOperationException($"Çıktı dosyası açılamadı '{outputFilePath}'");
 
                 result = ffmpeg.avformat_write_header(OutputContext, null);
                 if (result < 0)
-                    throw new InvalidOperationException($"Could not write header to '{outputFilePath}'");
+                    throw new InvalidOperationException($"Bunun için aşlık yazılamadı '{outputFilePath}'");
 
                 HasInitialized = true;
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"{nameof(TransportStreamRecorder)} - Error Code {result}: {ex.Message}");
+                Debug.WriteLine($"{nameof(TransportStreamRecorder)} - Hata kodu {result}: {ex.Message}");
                 Release();
             }
         }

@@ -89,11 +89,11 @@
                 }
 
                 overlayGraphics?.DrawString(
-                    $"Clock: {e.Clock.TotalSeconds:00.00}\r\n" +
-                    $"PN   : {e.PictureNumber}\r\n" +
+                    $"Saat: {e.Clock.TotalSeconds:00.00}\r\n" +
+                    $"Resim Numarası   : {e.PictureNumber}\r\n" +
                     $"A/V  : {Math.Round(differenceMillis, 0):+000;-000;+000}\r\n" +
-                    $"A/C  : {Math.Round(audioLatency, 0):+000;-000;+000}\r\n" +
-                    "L \r\nR",
+                    $"Ses Gecikmesi  : {Math.Round(audioLatency, 0):+000;-000;+000}\r\n" +
+                    "Sol \r\nSağ",
                     overlayTextFont,
                     overlayTextFontBrush,
                     overlayTextOffset);

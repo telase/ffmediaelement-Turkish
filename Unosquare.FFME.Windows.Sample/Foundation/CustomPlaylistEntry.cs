@@ -14,9 +14,9 @@
     {
         private static readonly Dictionary<string, string> PropertyMap = new Dictionary<string, string>
         {
-            { nameof(Thumbnail), "ffme-thumbnail" },
-            { nameof(Format), "info-format" },
-            { nameof(LastOpenedUtc), "ffme-lastopened" }
+            { nameof(Thumbnail), "Kucuk-Resim" },
+            { nameof(Format), "Video-Format" },
+            { nameof(LastOpenedUtc), "Son-Seyredilen" }
         };
 
         /// <summary>

@@ -31,12 +31,10 @@
             else
             {
                 Name = RootViewModel.ProductName;
-                Attributes["x-projecturl"] = "https://github.com/unosquare/ffmediaelement";
                 SaveEntries();
             }
 
             // Update the version
-            Attributes["x-version"] = ViewModel.Root.AppVersion;
         }
 
         /// <summary>
@@ -77,13 +75,13 @@
                         MediaSource = mediaSource.OriginalString,
                         Title = (mediaSource.IsFile || mediaSource.IsUnc)
                             ? Path.GetFileNameWithoutExtension(mediaSource.ToString())
-                            : $"Media File {DateTime.Now}"
+                            : $"Medya Dosyası {DateTime.Now}"
                     };
 
                     // Try to get a title from metadata
                     foreach (var meta in info.Metadata)
                     {
-                        if (!(meta.Key?.Trim().Equals("title", StringComparison.OrdinalIgnoreCase) ?? false))
+                        if (!(meta.Key?.Trim().Equals("başlık", StringComparison.OrdinalIgnoreCase) ?? false))
                             continue;
 
                         entry.Title = meta.Value;
@@ -91,7 +89,7 @@
                     }
 
                     if (string.IsNullOrWhiteSpace(entry.Title))
-                        entry.Title = $"(No Name) - {mediaSource}";
+                        entry.Title = $"(İsim Yok) - {mediaSource}";
                 }
                 else
                 {
@@ -110,7 +108,7 @@
                 foreach (var meta in info.Metadata)
                 {
                     // Get a safe meta-key
-                    var metaKey = meta.Key?.Trim() ?? "none";
+                    var metaKey = meta.Key?.Trim() ?? "yok";
                     var sb = new StringBuilder();
                     foreach (var c in metaKey)
                     {

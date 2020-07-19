@@ -27,7 +27,7 @@
                             <ColumnDefinition />
                             <ColumnDefinition Width="20" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="Quick Search . . ." FontWeight="Bold" Padding="4,0,0,0"
+                        <TextBlock Text="Kanal Arama . . ." FontWeight="Bold" Padding="4,0,0,0"
                                    VerticalAlignment="Center" IsHitTestVisible="False">
                             <TextBlock.Style>
                                 <Style TargetType="TextBlock">
@@ -82,7 +82,7 @@
                 </Grid.Style>
                 <Border CornerRadius="8" BorderThickness="1" Padding="10,2,10,2" Background="#ddffffff" Margin="6">
                     <Grid>
-                        <TextBlock Text="Full path to file or URL (Press Enter to open)" 
+                        <TextBlock Text="Dosya veya URL'nin tam yolu (Açmak için yapıştır ve Enter tuşuna basın)" 
                                    FontWeight="Bold" Padding="4,0,0,0"
                                    VerticalAlignment="Center" IsHitTestVisible="False">
                             <TextBlock.Style>
@@ -234,12 +234,12 @@
                                         <TextBlock DockPanel.Dock="Top" 
                                                         FontSize="9" Foreground="#666" TextTrimming="CharacterEllipsis"
                                                         Margin="4,4,4,0">
-                                                        <TextBlock>Viewed on </TextBlock>
+                                                        <TextBlock>Görüntülendi </TextBlock>
                                                         <TextBlock FontWeight="Bold" Text="{Binding LastOpenedUtc, Converter={StaticResource UtcDateToLocalTimeString}}" />
                                                         <TextBlock> - </TextBlock>
                                                         <Hyperlink 
                                                             Command="{Binding Source={StaticResource ViewModel}, Path=Commands.RemovePlaylistItemCommand}"
-                                                            CommandParameter="{Binding}">REMOVE</Hyperlink>
+                                                            CommandParameter="{Binding}">KALDIR</Hyperlink>
                                                     </TextBlock>
                                     </DockPanel>
                                 </Grid>
@@ -250,7 +250,7 @@
                 <Border Grid.Row="1" VerticalAlignment="Center">
                     <TextBlock Foreground="#ccc" TextAlignment="Center" FontSize="13">
                         <TextBlock Text="{Binding ElementName=PlaylistItemsControl, Path=ItemsSource.Count}" />
-                        <TextBlock> items in playlist.</TextBlock>
+                        <TextBlock> oynatma listesindeki öğeler.</TextBlock>
                     </TextBlock>
                 </Border>
             </Grid>

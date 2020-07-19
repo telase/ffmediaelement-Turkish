@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\TeLaSe\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\TeLaSe\\.nuget\\packages"
+    ]
+  }
+}
