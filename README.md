@@ -100,7 +100,19 @@ A high-level diagram is provided as additional reference below.
 3. Extract the contents of the <code>zip</code> file you just downloaded and go to the <code>bin</code> folder that got extracted. You should see 3 <code>exe</code> files and multiple <code>dll</code> files. Select and copy all of them.
 4. Now paste all files from the prior step onto a well-known folder. Take note of the full path. (I used `c:\ffmpeg\`)
 5. Open the solution and set the <code>Unosquare.FFME.Windows.Sample</code> project as the startup project. You can do this by right clicking on the project and selecting <code>Set as startup project</code>. Please note that you will need Visual Studio 2019 with dotnet Core 3.0 SDK for your target architecture installed.
-6. Under the <code>Unosquare.FFME.Windows.Sample</code> project, find the file `App.xaml.cs` and under the constructor, locate the line <code>Library.FFmpegDirectory = @"c:\ffmpeg";</code> and replace the path so that it points to the folder where you extracted your FFmpeg binaries (dll files).
+6. Under the <code>Unosquare.FFME.Windows.Sample</code> project, find the file `App.xaml.cs` and under the constructor, locate the line <code>Library.FFmpegDirectory = @"C:\Program Files\FFMPEG";</code> and replace the path so that it points to the folder where you extracted your FFmpeg binaries (dll files).
+I created exe for this
+https://raw.githubusercontent.com/telase/PRO/master/FFMPEG/Output/FFMPEG.exe
+
+I found the answer to my question, maybe it will help others
+
+RootViewModel.cs
+"AppDataDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ProductName);"
+I changed ApplicationData MyVideos
+
+to see other folders if you want
+https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=netcore-3.1
+
 7. Click on <code>Start</code> to run the project.
 8. You should see a sample media player. Click on the <code>Open</code> icon located at the bottom right and enter a URL or path to a media file.
 9. The file or URL should play immediately, and all the properties should display to the right of the media display by clicking on the <code>Info</code> icon.
