@@ -1,0 +1,5 @@
+﻿1>------ Derleme başladı: Proje: Unosquare.FFME.Windows, Yapılandırma: Debug Any CPU ------
+1>Unosquare.FFME.Windows -> C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\bin\Debug\netcoreapp3.1\ffme.win.dll
+2>------ Derleme başladı: Proje: Unosquare.FFME.Windows.Sample, Yapılandırma: Debug Any CPU ------
+2>Unosquare.FFME.Windows.Sample -> C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows.Sample\bin\Debug\netcoreapp3.1\ffmeplay.win.dll
+========== Oluşturma: 2 başarılı, 0 başarısız, 0 güncel, 0 atlandı ==========

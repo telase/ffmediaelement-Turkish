@@ -30,6 +30,8 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Unosquare.FFME.MediaElement\Unosquare.FFME.MediaElement.projitems*{4f84c6a1-ba3a-4a1e-84ee-7a7aa214f317}*SharedItemsImports = 13
+		Unosquare.FFME.MediaElement\Unosquare.FFME.MediaElement.projitems*{a6eb99a6-aae2-4e6e-ab9e-93992ce5b84d}*SharedItemsImports = 5
+		Unosquare.FFME\Unosquare.FFME.projitems*{a6eb99a6-aae2-4e6e-ab9e-93992ce5b84d}*SharedItemsImports = 5
 		Unosquare.FFME\Unosquare.FFME.projitems*{b14a1cd8-e4e8-44e1-805a-66d0fafc6263}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
