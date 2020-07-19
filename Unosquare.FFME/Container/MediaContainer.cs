@@ -28,7 +28,7 @@ namespace Unosquare.FFME.Container
         /// <summary>
         /// The exception message no input context.
         /// </summary>
-        private const string ExceptionMessageNoInputContext = "Stream InputContext has not been initialized.";
+        private const string ExceptionMessageNoInputContext = "Stream InputContext başlatılamadı.";
 
         /// <summary>
         /// The logging handler.
@@ -477,12 +477,12 @@ namespace Unosquare.FFME.Container
 
                 // Check the input parameters
                 if (input == null)
-                    throw new ArgumentNullException($"{nameof(input)} cannot be null.");
+                    throw new ArgumentNullException($"{nameof(input)} Boş olamaz.");
 
                 if (input.IsStale)
                 {
                     throw new ArgumentException(
-                        $"The {nameof(input)} {nameof(MediaFrame)} ({input.MediaType}) has already been released (it's stale).");
+                        $"The {nameof(input)} {nameof(MediaFrame)} ({input.MediaType}) zaten serbest bırakıldı (it's stale).");
                 }
 
                 try
@@ -492,7 +492,7 @@ namespace Unosquare.FFME.Container
                         MediaType.Video => Components.HasVideo && Components.Video.MaterializeFrame(input, ref output, previousBlock),
                         MediaType.Audio => Components.HasAudio && Components.Audio.MaterializeFrame(input, ref output, previousBlock),
                         MediaType.Subtitle => Components.HasSubtitles && Components.Subtitles.MaterializeFrame(input, ref output, previousBlock),
-                        _ => throw new MediaContainerException($"Unable to materialize frame of {nameof(MediaType)} {input.MediaType}"),
+                        _ => throw new MediaContainerException($"Çerçevesini gerçekleştiremiyor {nameof(MediaType)} {input.MediaType}"),
                     };
                 }
                 finally
@@ -693,7 +693,7 @@ namespace Unosquare.FFME.Container
                     // Validate the open operation
                     if (openResult < 0)
                     {
-                        throw new MediaContainerException($"Could not open '{MediaSource}'. "
+                        throw new MediaContainerException($"Açılamadı '{MediaSource}'. "
                             + $"Error {openResult}: {FFInterop.DecodeMessage(openResult)}");
                     }
 
@@ -707,7 +707,7 @@ namespace Unosquare.FFME.Container
                     while (currentEntry?.Key != null)
                     {
                         this.LogWarning(Aspects.Container,
-                            $"Invalid input option: '{currentEntry.Key}'");
+                            $"Geçersiz giriş seçeneği: '{currentEntry.Key}'");
 
                         currentEntry = privateOptions.Next(currentEntry);
                     }
@@ -720,7 +720,7 @@ namespace Unosquare.FFME.Container
                 if (ffmpeg.avformat_find_stream_info(InputContext, null) < 0)
                 {
                     this.LogWarning(Aspects.Container,
-                        $"{MediaSource}: could not read stream information.");
+                        $"{MediaSource}: akış bilgileri okunamadı.");
                 }
 
                 // HACK: From ffplay.c: maybe should not use avio_feof() to test for the end
@@ -775,7 +775,7 @@ namespace Unosquare.FFME.Container
             }
             catch (Exception ex)
             {
-                this.LogError(Aspects.Container, $"Fatal error initializing {nameof(MediaContainer)} instance.", ex);
+                this.LogError(Aspects.Container, $"Başlatılırken önemli hata {nameof(MediaContainer)} örnek.", ex);
                 Close();
                 throw;
             }
@@ -915,7 +915,7 @@ namespace Unosquare.FFME.Container
 
             // Verify we have at least 1 stream component to work with.
             if (Components.HasVideo == false && Components.HasAudio == false && Components.HasSubtitles == false)
-                throw new MediaContainerException($"{MediaSource}: No audio, video, or subtitle streams found to decode.");
+                throw new MediaContainerException($"{MediaSource}: Kod çözülecek ses, video veya altyazı akışı bulunamadı.");
 
             // Initially and depending on the video component, require picture attachments.
             // Picture attachments are only required after the first read or after a seek.
@@ -937,7 +937,7 @@ namespace Unosquare.FFME.Container
         {
             // Check the context has been initialized
             if (IsOpen == false)
-                throw new InvalidOperationException($"Please call the {nameof(Open)} method before attempting this operation.");
+                throw new InvalidOperationException($"Bu işlemi denemeden önce lütfen {nameof(Open)} yöntemini çağırın.");
 
             if (IsReadAborted)
                 return MediaType.None;
@@ -977,7 +977,7 @@ namespace Unosquare.FFME.Container
                 }
 
                 if (InputContext->pb != null && InputContext->pb->error != 0)
-                    throw new MediaContainerException($"Input has produced an error. Error Code {readResult}, {FFInterop.DecodeMessage(readResult)}");
+                    throw new MediaContainerException($"Giriş bir hata verdi. Hata kodu {readResult}, {FFInterop.DecodeMessage(readResult)}");
             }
             else
             {
@@ -1016,7 +1016,7 @@ namespace Unosquare.FFME.Container
             if (SignalAbortReadsRequested.Value)
             {
                 this.LogInfo(Aspects.Container,
-                    $"{nameof(OnStreamReadInterrupt)} was requested an immediate read exit.");
+                    $"{nameof(OnStreamReadInterrupt)} hemen okuma çıkışı istendi.");
 
                 if (SignalAbortReadsAutoReset.Value)
                     SignalAbortReadsRequested.Value = false;
@@ -1033,7 +1033,7 @@ namespace Unosquare.FFME.Container
             if (Configuration.ReadTimeout.Ticks < 0 || timeDifference.Ticks <= Configuration.ReadTimeout.Ticks)
                 return OkResult;
 
-            this.LogError(Aspects.Container, $"{nameof(OnStreamReadInterrupt)} timed out with  {timeDifference.Format()}");
+            this.LogError(Aspects.Container, $"{nameof(OnStreamReadInterrupt)} zaman aşımına uğradı  {timeDifference.Format()}");
             return ErrorResult;
         }
 
@@ -1075,7 +1075,7 @@ namespace Unosquare.FFME.Container
             if (IsStreamSeekable == false)
             {
                 this.LogWarning(Aspects.EngineCommand,
-                    "Unable to seek. Underlying stream does not support seeking.");
+                    "Arama yapılamıyor. Temel akış, aramayı desteklemez.");
 
                 return null;
             }
