@@ -441,7 +441,7 @@
         private void LogEventStart(string eventName)
         {
             if (Debugger.IsAttached)
-                this.LogTrace(Aspects.Events, $"EVENT START: {eventName}");
+                this.LogTrace(Aspects.Events, $"ETKİNLİK BAŞLANGIÇ: {eventName}");
         }
 
         /// <summary>
@@ -452,7 +452,7 @@
         private void LogEventDone(string eventName)
         {
             if (Debugger.IsAttached)
-                this.LogTrace(Aspects.Events, $"EVENT DONE : {eventName}");
+                this.LogTrace(Aspects.Events, $"ETKİNLİK BİTTİ : {eventName}");
         }
 
         #endregion

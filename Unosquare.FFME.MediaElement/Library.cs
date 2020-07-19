@@ -17,7 +17,7 @@
                 lock (SyncLock)
                 {
                     if (m_GuiContext == null)
-                        throw new InvalidOperationException($"{nameof(IGuiContext)} has not been registered.");
+                        throw new InvalidOperationException($"{nameof(IGuiContext)} kayıtlı değil.");
 
                     return m_GuiContext;
                 }
@@ -33,9 +33,9 @@
             lock (SyncLock)
             {
                 if (m_GuiContext != null)
-                    throw new InvalidOperationException($"{nameof(GuiContext)} has already been registered.");
+                    throw new InvalidOperationException($"{nameof(GuiContext)} zaten kayıtlı.");
 
-                m_GuiContext = context ?? throw new ArgumentNullException($"{nameof(context)} cannot be null.");
+                m_GuiContext = context ?? throw new ArgumentNullException($"{nameof(context)} boş olamaz.");
             }
         }
     }
