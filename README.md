@@ -9,7 +9,7 @@
 
 :star: *Please star this project if you like it and show your appreciation via* **[PayPal.Me](https://www.paypal.me/mariodivece/50usd)**
 
-![ffmeplay](https://github.com/unosquare/ffmediaelement/raw/master/Support/ffmeplay.png)
+![ffmeplay](https://github.com/telase/ffmediaelement/raw/master/Support/ffmeplay.png)
 
 ## Current NuGet Release Status
 - If you would like to support this project, you can show your appreciation via [PayPal.Me](https://www.paypal.me/mariodivece/50usd)
