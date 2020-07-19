@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "chzDawbDRTRcu8zo+QUavVDVuBzfsQEcZ4vQo1e+VDb9ZJb65HVWW62yCxGN4sMc7CgaF8XSTXWG4fM+49CFBg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\TeLaSe\\Downloads\\Compressed\\100\\ffmediaelement-master\\ffmediaelement-master\\Unosquare.FFME.Windows\\Unosquare.FFME.Windows.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TeLaSe\\.nuget\\packages\\ffmpeg.autogen\\4.2.0\\ffmpeg.autogen.4.2.0.nupkg.sha512",
+    "C:\\Users\\TeLaSe\\.nuget\\packages\\microsoft.codeanalysis.fxcopanalyzers\\2.9.2\\microsoft.codeanalysis.fxcopanalyzers.2.9.2.nupkg.sha512",
+    "C:\\Users\\TeLaSe\\.nuget\\packages\\microsoft.codeanalysis.versioncheckanalyzer\\2.9.2\\microsoft.codeanalysis.versioncheckanalyzer.2.9.2.nupkg.sha512",
+    "C:\\Users\\TeLaSe\\.nuget\\packages\\microsoft.codequality.analyzers\\2.9.2\\microsoft.codequality.analyzers.2.9.2.nupkg.sha512",
+    "C:\\Users\\TeLaSe\\.nuget\\packages\\microsoft.netcore.analyzers\\2.9.2\\microsoft.netcore.analyzers.2.9.2.nupkg.sha512",
+    "C:\\Users\\TeLaSe\\.nuget\\packages\\microsoft.netframework.analyzers\\2.9.2\\microsoft.netframework.analyzers.2.9.2.nupkg.sha512",
+    "C:\\Users\\TeLaSe\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
+  ],
+  "logs": []
+}

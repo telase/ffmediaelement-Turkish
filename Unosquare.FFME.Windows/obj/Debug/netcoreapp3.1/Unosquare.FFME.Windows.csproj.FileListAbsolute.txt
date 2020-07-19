@@ -1,0 +1,12 @@
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\bin\Debug\netcoreapp3.1\ffme.win.xml
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\bin\Debug\netcoreapp3.1\ffme.win.deps.json
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\bin\Debug\netcoreapp3.1\ffme.win.dll
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\bin\Debug\netcoreapp3.1\ffme.win.pdb
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\obj\Debug\netcoreapp3.1\Unosquare.FFME.Windows.csprojAssemblyReference.cache
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\obj\Debug\netcoreapp3.1\Unosquare.FFME.Properties.Resources.resources
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\obj\Debug\netcoreapp3.1\Unosquare.FFME.Windows.csproj.GenerateResource.cache
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\obj\Debug\netcoreapp3.1\Unosquare.FFME.Windows.AssemblyInfoInputs.cache
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\obj\Debug\netcoreapp3.1\Unosquare.FFME.Windows.AssemblyInfo.cs
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\obj\Debug\netcoreapp3.1\Unosquare.FFME.Windows.csproj.CoreCompileInputs.cache
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\obj\Debug\netcoreapp3.1\ffme.win.dll
+C:\Users\TeLaSe\Downloads\Compressed\100\ffmediaelement-master\ffmediaelement-master\Unosquare.FFME.Windows\obj\Debug\netcoreapp3.1\ffme.win.pdb

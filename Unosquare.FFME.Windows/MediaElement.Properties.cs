@@ -21,7 +21,7 @@ namespace Unosquare.FFME
         /// a preview image in design time. This is a dependency property.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("Gets or sets a value that indicates whether the MediaElement will display a preview image in design time.")]
+        [Description("MediaElement öğesinin tasarım zamanında bir önizleme görüntüsü gösterip göstermeyeceğini gösteren bir değer alır veya ayarlar.")]
         public bool IsDesignPreviewEnabled
         {
             get => (bool)GetValue(IsDesignPreviewEnabledProperty);
@@ -77,7 +77,7 @@ namespace Unosquare.FFME
         /// Note: Valid values are from 0 to 1.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("The playback volume. Ranges from 0.0 to 1.0")]
+        [Description("Çalma ses seviyesi. Aralıkları 0.0 to 1.0")]
         public double Volume
         {
             get => (double)GetValue(VolumeProperty);
@@ -112,7 +112,7 @@ namespace Unosquare.FFME
         /// Gets/Sets the Balance property on the MediaElement.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("The audio balance for left and right audio channels. Valid ranges are -1.0 to 1.0")]
+        [Description("Sol ve sağ ses kanalları için ses dengesi. Geçerli aralıklar -1.0 to 1.0")]
         public double Balance
         {
             get => (double)GetValue(BalanceProperty);
@@ -147,7 +147,7 @@ namespace Unosquare.FFME
         /// Gets/Sets the IsMuted property on the MediaElement.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("Gets or sets whether audio samples should be rendered.")]
+        [Description("Ses örneklerinin oluşturulup oluşturulmayacağını alır veya ayarlar.")]
         public bool IsMuted
         {
             get => (bool)GetValue(IsMutedProperty);
@@ -183,7 +183,7 @@ namespace Unosquare.FFME
         /// for seek operations while paused. This is a dependency property.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("Gets or sets a value that indicates whether the MediaElement will display frames for seek operations before the final seek position is reached.")]
+        [Description("MediaElement öğesinin son arama konumuna ulaşılmadan önce arama işlemleri için çerçeveleri görüntüleyip görüntülemeyeceğini gösteren bir değer alır veya ayarlar.")]
         public bool ScrubbingEnabled
         {
             get => (bool)GetValue(ScrubbingEnabledProperty);
@@ -219,7 +219,7 @@ namespace Unosquare.FFME
         /// for seek operations while paused. This is a dependency property.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("Gets or sets a value that indicates whether the MediaElement will display frames for seek operations before the final seek position is reached.")]
+        [Description("MediaElement öğesinin son arama konumuna ulaşılmadan önce arama işlemleri için çerçeveleri görüntüleyip görüntülemeyeceğini gösteren bir değer alır veya ayarlar.")]
         public bool VerticalSyncEnabled
         {
             get => (bool)GetValue(VerticalSyncEnabledProperty);
@@ -254,7 +254,7 @@ namespace Unosquare.FFME
         /// Gets/Sets the SpeedRatio property on the MediaElement.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("Specifies how quickly or how slowly the media should be rendered. 1.0 is normal speed. Value must be greater then or equal to 0.0")]
+        [Description("Medyanın ne kadar hızlı veya ne kadar yavaş oluşturulması gerektiğini belirtir. 1.0 normal hızdır. Değer, ondan büyük veya ona eşit olmalıdır 0.0")]
         public double SpeedRatio
         {
             get => (double)GetValue(SpeedRatioProperty);
@@ -289,7 +289,7 @@ namespace Unosquare.FFME
         /// Gets/Sets the Position property on the MediaElement.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("Specifies the position of the underlying media. Set this property to seek though the media stream.")]
+        [Description("Temel ortamın konumunu belirtir. Bu özelliği medya akışından arayacak şekilde ayarla.")]
         public TimeSpan Position
         {
             get => (TimeSpan)GetValue(PositionProperty);
@@ -350,7 +350,7 @@ namespace Unosquare.FFME
         /// also set, then the loaded behavior takes control.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("Specifies how the underlying media should behave when it has loaded. The default behavior is to Play the media.")]
+        [Description("Temel ortamın yüklendiğinde nasıl davranması gerektiğini belirtir. Varsayılan davranış Medyayı oynatmaktır.")]
         public MediaPlaybackState LoadedBehavior
         {
             get => (MediaPlaybackState)GetValue(LoadedBehaviorProperty);
@@ -373,7 +373,7 @@ namespace Unosquare.FFME
         /// the unloaded event gets fired. The default behavior is to Close and release the resources.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("Specifies how the underlying media engine's resources should be handled when the unloaded event gets fired.")]
+        [Description("Yüklenmeyen olay tetiklendiğinde temel medya motorunun kaynaklarının nasıl ele alınması gerektiğini belirtir.")]
         public MediaPlaybackState UnloadedBehavior
         {
             get => (MediaPlaybackState)GetValue(UnloadedBehaviorProperty);
@@ -407,7 +407,7 @@ namespace Unosquare.FFME
         /// Specifies how the media should behave when it has ended. The default behavior is to Pause the media.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("Specifies how the media should behave when it has ended. The default behavior is to Pause the media.")]
+        [Description("Medyanın bittiğinde nasıl davranması gerektiğini belirtir. Varsayılan davranış, Ortamı Duraklatmaktır.")]
         public MediaPlaybackState LoopingBehavior
         {
             get => (MediaPlaybackState)GetValue(LoopingBehaviorProperty);
@@ -430,7 +430,7 @@ namespace Unosquare.FFME
         /// Note: Valid values are from 0 to 1.
         /// </summary>
         [Category(nameof(MediaElement))]
-        [Description("The video CC Channel to render. Ranges from 0 to 4")]
+        [Description("Oluşturulacak video CC Kanalı. Aralıkları 0 dan 4 kadar")]
         public CaptionsChannel ClosedCaptionsChannel
         {
             get => (CaptionsChannel)GetValue(ClosedCaptionsChannelProperty);
