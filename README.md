@@ -1,8 +1,5 @@
 ![ffmeplay](https://github.com/telase/ffmediaelement/raw/master/Support/ffmeplay.png)
-
-## Current NuGet Release Status
-- If you would like to support this project, you can show your appreciation via [PayPal.Me](https://www.paypal.me/mariodivece/50usd)
-- Current Status: (2019-12-28) - Release 4.2.330 is now available, (see the <a href="https://github.com/unosquare/ffmediaelement/releases">Releases</a>)
+Your iptv.m3u files,Videos\FFmpeg Player will be in the folder
 - NuGet Package available here: https://www.nuget.org/packages/FFME.Windows/
 - FFmpeg Version: 4.2.1 <a href="https://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-4.2.1-win32-shared.zip">32-bit</a> or <a href="https://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-4.2.1-win64-shared.zip">64-bit</a>
 - BREAKING CHANGE: Starting realease 4.1.320 the `Source` dependency property has been downgraded to a notification property. Please use the asynchronous `Open` and `Close` methods instead.
@@ -15,8 +12,9 @@ Here is a quick guide on how to get started.
 1. Open Visual Studio (v2019 preview recommended), and create a new WPF Application. Target Framework must be 4.6.1 or above, or .Net Core 3.0 or above.
 2. Install the NuGet Package from your Package Manager Console: `PM> Install-Package FFME.Windows`
 3. You need FFmpeg **shared** binaries (64 or 32 bit, depending on your app's target architecture). Build your own or download a compatible build from [Zeranoe FFmpeg Builds site](https://ffmpeg.zeranoe.com/builds/).
-4. Your FFmpeg build should have a `bin` folder with 3 exe files and some dll files. Copy all those files to a folder such as `c:\ffmpeg`
-5. Within you application's startup code (`Main` method), set `Unosquare.FFME.Library.FFmpegDirectory = @"c:\ffmpeg";`.
+4. Your FFmpeg build should have a `bin` folder with 3 exe files and some dll files. Copy all those files to a folder such as `C:\Program Files\FFMPEG`
+https://raw.githubusercontent.com/telase/PRO/master/FFMPEG/Output/FFMPEG.exe
+5. Within you application's startup code (`Main` method), set `Unosquare.FFME.Library.FFmpegDirectory = @"C:\Program Files\FFMPEG";`.
 6. Use the FFME `MediaElement` control as any other WPF control.
 For example: In your `MainForm.xaml`, add the namespace: `xmlns:ffme="clr-namespace:Unosquare.FFME;assembly=ffme.win"` and then add the FFME control your window's XAML: `<ffme:MediaElement x:Name="Media" Background="Gray" LoadedBehavior="Play" UnloadedBehavior="Manual" />` 
 7. To play files or streams, simply call the asynchronous method `Open`: `await Media.Open(new Uri(@"c:\your-file-here"));`. Conversely you close the media by calling `await Media.Close();`
